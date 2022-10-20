@@ -26,19 +26,38 @@ function Counter() {
 
 
       </div>
-      <div className='subhead'><h2>Room is {(isLit) ? "lit" : "dark"}</h2></div>
+
+      <div className='subhead'>
+        <h2>Room is {(isLit) ? "lit" : "dark"}</h2>
+      </div>
+
       <h1 className='counterhead'>Number Counter</h1>
+
       <div className='mainCounter'>
-      <div className='counter'>
-        <button className={(isLit) ? 'countButton lit' : 'countButton dark'}
-          onClick={() => { setCount(count + 1) }}>Counter &gt;&gt;
-        </button>
-        <div className='countervalue'>Counter value: {count}</div>
-        <button className={(isLit) ? 'countButton lit' : 'countButton dark'}
-          onClick={() => { setCount(count - 1) }}>Counter &lt;&lt;
-        </button>
+
+        <div className='counter'>
+
+          <button className={(isLit) ? 'countButton lit' : 'countButton dark'}
+            onClick={() => { setCount(count + 1) }}>Counter &gt;&gt;
+          </button>
+
+          <div className='countervalue'>
+            Counter value: {count}
+
+          </div>
+          <button className={(isLit) ? 'countButton lit' : 'countButton dark'}
+            onClick={() => { setCount(count - 1) }}>Counter &lt;&lt;
+          </button>
+          
+        </div>
+
       </div>
-      </div>
+
+      <div className='subhead'>
+        <button className={(isLit) ? 'resetButton lit' : 'resetButton dark'}
+          onClick={() => { setCount(0) }}>Reset
+        </button>
+      </div>      
       
     </div>
   );

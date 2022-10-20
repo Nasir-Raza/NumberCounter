@@ -1,6 +1,6 @@
 .head {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .subhead {
@@ -63,9 +63,9 @@
 
 
 .countButton {
-  min-width: 24%;
+  min-width: 20%;
   width: auto;
-  word-break: break-all;
+  overflow-wrap: break-word;
   height: auto;
   padding: 2%;
   font-size: 1.4em;
@@ -83,4 +83,54 @@
 .counter>.dark {
   background-color: white;
   color: black;
+}
+
+.resetButton {
+  min-width: 12%;
+  width: auto;
+  word-break: break-all;
+  height: auto;
+  padding: 1%;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-radius: 15px;
+  box-shadow: 1px 1px 2px 2px mediumturquoise;
+  cursor: pointer;
+}
+
+.subhead>.lit {
+  background-color: black;
+  color: white;
+}
+
+.subhead>.dark {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width:500px) {
+
+  .subhead {
+    font-size: 0.7em;
+  }
+
+  .counterhead {
+    font-size: 1.4em;
+  }
+
+  .counter {
+    width: 94%;
+  }
+
+  .countervalue {
+    font-size: 1.2em;
+  }
+
+  .countButton {
+    font-size: 0.9em;
+  }
+
+  .resetButton {
+    font-size: 1em;
+  }
 }
